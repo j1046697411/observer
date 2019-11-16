@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    fetch("text.json",{
+        method:"post",
+        headers:{
+            contentType:"application/json"
+        },
+        mode:"cors",
+        body:{
+            text:123,
+            arrays:[1,2,3]
+        }
+    }).then(function (value) {
+        console.log(value)
+    }).finally(function () {
+        console.log("finally")
+    }).catch(function (reason) {
+        console.log("catch:")
+    });
+</script>
+</html>
